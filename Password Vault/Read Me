@@ -1,0 +1,5 @@
+saver:
+  gets data as input from the user after authentication
+  then saves it in a file as an encoded string
+access:
+  reads string data from file decodes it and print the data
