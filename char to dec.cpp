@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<cmath>
 using namespace std;
 
 int char_to_dec(char b)
@@ -13,18 +14,23 @@ int char_to_dec(char b)
 
 int string_to_int(string str)
 {
-	
+	int x;
+	int bit=str.length()-1;
+	for (int i=0;i<str.length();i++)
+	{
+		int multiplier=10;
+		multiplier=pow(multiplier,bit);
+		x+=char_to_dec(str[i])*multiplier;
+		bit--;
+	}
+	return x;
 }
 
 int main()
 {
-	string a,b;
+	string a;
 	cin>>a;
-	int x;
-	for (int i=0;i<a.length();i++)
-	{
-		x+=char_to_dec(a[i])*10;
-	}
-	cout<<"Answer : "<<x<<endl;
+	cout<<string_to_int(a)<<endl;
+	
 	return 0;
 }
