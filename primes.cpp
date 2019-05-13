@@ -1,3 +1,8 @@
+/*
+Name: Asjid Ahmed.
+Date Modified: 13-05-2019.
+Description: Takes an interval and prints all the primes in that interval and also prints the largest prime in that interval.
+*/
 #include<iostream>
 using namespace std;
 bool isPrime(int n);
